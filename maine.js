@@ -130,14 +130,14 @@ function runDirectHeroCinematic() {
     // ── GALLERY ──
  const galleryData = [
   { image: "media/pic/gall-1.jpg", cat: "engagement", h: 1 },
-  { image: "/media/pic/gall-2.jpg", cat: "engagement", h: 1.3 },
-  { image: "/media/pic/gall-3.jpg", cat: "travel", h: 0.8 },
-  { image: "/media/pic/gall-4.jpg", cat: "travel", h: 1.2 },
-  { image: "/media/pic/gall-5.jpg", cat: "family", h: 1 },
-  { image: "/media/pic/gall-6.jpg", cat: "engagement", h: 1.4 },
-  { image: "/media/pic/gall-7.jpg", cat: "travel", h: 0.9 },
-  { image: "/media/pic/gall-8.jpg", cat: "family", h: 1.1 },
-  { image: "/media/pic/fell-lov.jpg", cat: "engagement", h: 0.85 },
+  { image: "media/pic/gall-2.jpg", cat: "engagement", h: 1.3 },
+  { image: "media/pic/gall-3.jpg", cat: "travel", h: 0.8 },
+  { image: "media/pic/gall-4.jpg", cat: "travel", h: 1.2 },
+  { image: "media/pic/gall-5.jpg", cat: "family", h: 1 },
+  { image: "media/pic/gall-6.jpg", cat: "engagement", h: 1.4 },
+  { image: "media/pic/gall-7.jpg", cat: "travel", h: 0.9 },
+  { image: "media/pic/gall-8.jpg", cat: "family", h: 1.1 },
+  { image: "media/pic/fell-lov.jpg", cat: "engagement", h: 0.85 },
 ];function renderGallery(filter) {
   const g = document.getElementById('galleryGrid');
   const items = filter === 'all'
