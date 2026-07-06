@@ -542,7 +542,7 @@ function shareSnapchat(event) {
     navigator.clipboard.writeText(url).catch(() => {});
 
     alert("تم نسخ الرابط. الصقه داخل محادثة في سناب شات.");
-    window.open("https://www.snapchat.com/", "_blank");
+    window.open("https://www.snapchat.com", "_blank");
 }
 
 function shareInstagram(event) {
@@ -552,5 +552,5 @@ function shareInstagram(event) {
     copyLink(url);
 
     alert("تم نسخ رابط الموقع. الصقه داخل رسالة أو ستوري أو البايو في إنستجرام.");
-    window.open("https://www.instagram.com/", "_blank");
+    window.open("https://www.instagram.com", "_blank");
 }
