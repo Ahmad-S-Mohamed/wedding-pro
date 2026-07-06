@@ -1409,6 +1409,10 @@ footer span {
 }
 
 /* ── أجهزة لوحية (≤820px) ── */
+@media (min-width: 820px) {
+  #playlist-btn{
+  display: none;
+}
 @media (max-width: 820px) {
   nav {
   
@@ -1438,6 +1442,16 @@ footer span {
 }
 #playlist-selector{
   font-size:16px;
+}
+   #playlist-selector{
+  display: none;
+}
+#playlist-btn{
+  display: block;
+
+}
+#player-title{
+  display: none;
 }
 
 }
