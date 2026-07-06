@@ -225,15 +225,15 @@ const trackTitle = document.getElementById("player-track-title");
 const playlist = [
     {
         src: "media/sound/sound1.mpeg",
-        title: "اللحن الرومانسي الملكي"
+        title: "music 1"
     },
     {
         src: "media/sound/sound2.mpeg",
-        title: "موسيقى هادئة كلاسيك"
+        title: "music 2"
     },
     {
         src: "media/sound/sound3.mpeg",
-        title: "زفة الفرح والبهجة"
+        title: "music 3"
     }
 ];
 
@@ -345,6 +345,14 @@ if (initialIndex !== -1) {
         trackTitle.textContent =
             playlist[currentTrack].title;
     }
+}
+const playlistBtn = document.getElementById("playlist-btn");
+
+if (playlistBtn) {
+    playlistBtn.addEventListener("click", () => {
+        playlistSelector.focus();
+        playlistSelector.click();
+    });
 }
     // ── RSVP ──
     let attendVal = '';
