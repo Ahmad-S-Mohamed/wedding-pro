@@ -82,7 +82,7 @@
       <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
       <a href="#story" onclick="toggleMenu()">قصتنا</a>
       <a href="#gallery" onclick="toggleMenu()">الصور</a>
-      <a href="#videos" onclick="toggleMenu()">الفيديو</a>
+      <a href="#live-section" onclick="toggleMenu()">الفيديو</a>
       <a href="#details" onclick="toggleMenu()">التفاصيل</a>
       <a href="#rsvp" onclick="toggleMenu()">تأكيد الحضور</a>
       <a href="#wishes-section" onclick="toggleMenu()">كتاب الذكريات</a>
@@ -319,7 +319,7 @@
     </section>
     <!-- MUSIC -->
     <div id="premium-music-player"
-      class="fixed bottom-4 left-4 right-4 sm:right-auto z-40 bg-black/85 backdrop-blur-md border border-gold-500/20 p-2 sm:px-4 sm:py-3 rounded-2xl flex items-center justify-between sm:justify-start gap-3 shadow-2xl transition-all max-w-full sm:max-w-md">
+      class="fixed bottom-6 left-4 right-4 sm:right-auto z-40 bg-black/85 backdrop-blur-md border border-gold-500/20 p-2 sm:px-4 sm:py-3 rounded-2xl flex items-center justify-between sm:justify-start gap-3 shadow-2xl transition-all max-w-full sm:max-w-md">
       <audio id="wedding-audio-track">
         <source src="media/sound/intro-music.mpeg" type="audio/mp3">
       </audio>
@@ -337,13 +337,33 @@
             class="w-14 h-1 bg-zinc-700 accent-gold-500 rounded-lg appearance-none cursor-pointer">
         </div>
       </div>
+      <div class="relative">
+        <!-- زر يظهر في الجوال فقط -->
+        <button id="playlist-btn"
+          class="sm:hidden w-9 h-9 bg-zinc-900 border border-gold-500/20 rounded-full text-gold-300 flex items-center justify-center">
+          <i class="fa-solid fa-compact-disc"></i>
+        </button>
 
+        <!-- القائمة -->
+        <select id="playlist-selector" onchange="switchTrack(this.value)" class="absolute inset-0 opacity-0 sm:opacity-100 sm:static
+        w-9 h-9 sm:w-auto sm:h-auto
+        cursor-pointer
+        bg-zinc-900 text-gold-300 text-[10px] md:text-xs
+        border border-gold-500/20 rounded-lg p-1.5
+        focus:outline-none">
+          <option value="media/sound/sound1.mpeg">Music 1</option>
+          <option value="media/sound/sound2.mpeg">Music 2</option>
+          <option value="media/sound/sound3.mpeg">Music 3</option>
+        </select>
+      </div>
+
+      <!-- 
       <select id="playlist-selector" onchange="switchTrack(this.value)"
         class="bg-zinc-900 text-gold-300 text-[10px] md:text-xs border border-gold-500/20 rounded-lg p-1.5 focus:outline-none max-w-[150px] sm:max-w-none">
         <option value="media/sound/sound1.mpeg">music 1</option>
         <option value="media/sound/sound2.mpeg"> music 2</option>
         <option value="media/sound/sound3.mpeg">music 3 </option>
-      </select>
+      </select> -->
     </div>
 
     <!-- DETAILS -->
@@ -397,7 +417,7 @@
           <p class="section-tag">✦ شرّفنا بحضورك ✦</p>
           <h2 class="section-title">تأكيد <span>الحضور</span></h2>
           <span class="gold-line"></span>
-          <p class="section-subtitle">يسعدنا حضوركم الكريم، الرجاء تأكيد مشاركتكم قبل تاريخ ١ فبراير ٢٠٢٦</p>
+          <p class="section-subtitle">يسعدنا حضوركم الكريم، الرجاء تأكيد مشاركتكم </p>
         </div>
         <div class="rsvp-form-wrapper reveal">
           <div id="rsvpForm">
@@ -449,7 +469,8 @@
           <div
             class="lg:col-span-1 bg-gradient-to-br from-gray-900 to-black p-5 rounded-2xl border border-gold-500/20 shadow-xl h-fit"
             data-aos="fade-up">
-            <h3 class="font-reem text-lg text-gold-300 mb-4"><i class="fa-solid fa-pen-nib ml-2 text-xs"></i>اكتب تهنئتك
+            <h3 class="font-reem text-lg text-gold-300 mb-4"><i class="fa-solid fa-pen-nib ml-2 text-xs"></i>اكتب
+              تهنئتك
               للعروسين</h3>
             <form id="wish-form" class="space-y-3">
               <div>
